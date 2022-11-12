@@ -26,7 +26,7 @@ public class TopicServceImpl implements TopicService{
 			throw new IllegalArgumentException("");
 		}else if(topic.getPdfLink().isBlank()){
 			throw new IllegalArgumentException("");
-		}else if(topic.getVideoLink().isBlank()){
+		}else if(topic.getEnglishVideoLink().isBlank()){
 			throw new IllegalArgumentException("");
 		}else {			
 			return topicRepository.save(topic);
@@ -40,14 +40,14 @@ public class TopicServceImpl implements TopicService{
 		}else{
 			if(topic.getName().isBlank()) {
 				throw new IllegalArgumentException("");
-			}else if(topic.getVideoLink().isBlank()){
+			}else if(topic.getEnglishVideoLink().isBlank()){
 				throw new IllegalArgumentException("");
 			}else {
 				Topic existingTopic = topicRepository.getById(topicId);
 				
 				existingTopic.setName(topic.getName());
 				existingTopic.setPdfLink(topic.getPdfLink());
-				existingTopic.setVideoLink(topic.getVideoLink());
+				existingTopic.setEnglishVideoLink(topic.getEnglishVideoLink());
 				existingTopic.setHindiVideoLink(topic.getHindiVideoLink());
 				
 				return topicRepository.save(existingTopic);

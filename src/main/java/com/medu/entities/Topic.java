@@ -14,7 +14,7 @@ public class Topic {
 	private String name;
 	
 	@Column(unique = true, nullable = false)
-	private String videoLink;
+	private String englishVideoLink;
 
 	@Column(unique = true, nullable = false)
 	private String hindiVideoLink;
@@ -56,12 +56,12 @@ public class Topic {
 		this.name = name;
 	}
 
-	public String getVideoLink() {
-		return videoLink;
+	public String getEnglishVideoLink() {
+		return englishVideoLink;
 	}
 
-	public void setVideoLink(String videoLink) {
-		this.videoLink = videoLink;
+	public void setEnglishVideoLink(String englishVideoLink) {
+		this.englishVideoLink = englishVideoLink;
 	}
 
 	public String getPdfLink() {
