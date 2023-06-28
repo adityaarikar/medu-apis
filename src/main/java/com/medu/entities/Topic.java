@@ -13,10 +13,10 @@ public class Topic {
 	@Column(unique = true, nullable = false)
 	private String name;
 	
-	@Column(unique = true, nullable = false)
+	@Column(unique = true)
 	private String englishVideoLink;
 
-	@Column(unique = true, nullable = false)
+	@Column(unique = true)
 	private String hindiVideoLink;
 
 	public String getHindiVideoLink() {
